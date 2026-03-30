@@ -1,0 +1,3038 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='PeopleDashboard-PortfolioExample' path='/workbooks' revision='1.7' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='hr_monthly_snapshot.csv' inline='true' name='federated.15w300708xhg7515m33db14siybz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='hr_monthly_snapshot v2' name='textscan.1rge44k1v8vcgy107kdxv0cdxl86'>
+            <connection class='textscan' directory='C:/Users/Laura Murzinaite/OneDrive/Desktop/Data/HR Dashboard Project' filename='hr_monthly_snapshot v2.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1rge44k1v8vcgy107kdxv0cdxl86' name='hr_monthly_snapshot v2.csv' table='[hr_monthly_snapshot v2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='EmpID' ordinal='0' />
+            <column datatype='string' name='Employee_Name' ordinal='1' />
+            <column datatype='string' name='Sex' ordinal='2' />
+            <column datatype='string' name='Department' ordinal='3' />
+            <column datatype='string' name='Position' ordinal='4' />
+            <column datatype='string' name='EmploymentStatus' ordinal='5' />
+            <column datatype='date' name='hire_date' ordinal='6' />
+            <column datatype='date' name='term_date' ordinal='7' />
+            <column datatype='string' name='join_month' ordinal='8' />
+            <column datatype='string' name='leave_month' ordinal='9' />
+            <column datatype='string' name='RecruitmentSource' ordinal='10' />
+            <column datatype='string' name='PerformanceScore' ordinal='11' />
+            <column datatype='real' name='EngagementSurvey' ordinal='12' />
+            <column datatype='integer' name='EmpSatisfaction' ordinal='13' />
+            <column datatype='integer' name='Absences' ordinal='14' />
+            <column datatype='string' name='ManagerName' ordinal='15' />
+            <column datatype='string' name='RaceDesc' ordinal='16' />
+            <column datatype='date' name='month_start' ordinal='17' />
+            <column datatype='string' date-parse-format='MMM-yyyy' name='snapshot_month' ordinal='18' />
+            <column datatype='integer' name='is_active' ordinal='19' />
+            <column datatype='integer' name='is_active_end_month' ordinal='20' />
+            <column datatype='integer' name='is_new_joiner' ordinal='21' />
+            <column datatype='integer' name='is_leaver' ordinal='22' />
+          </columns>
+        </relation>
+        <cols>
+          <map key='[Absences (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[Absences]' />
+          <map key='[Department (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[Department]' />
+          <map key='[EmpID (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[EmpID]' />
+          <map key='[EmpSatisfaction (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[EmpSatisfaction]' />
+          <map key='[Employee_Name (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[Employee_Name]' />
+          <map key='[EmploymentStatus (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[EmploymentStatus]' />
+          <map key='[EngagementSurvey (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[EngagementSurvey]' />
+          <map key='[ManagerName (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[ManagerName]' />
+          <map key='[PerformanceScore (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[PerformanceScore]' />
+          <map key='[Position (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[Position]' />
+          <map key='[RaceDesc (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[RaceDesc]' />
+          <map key='[RecruitmentSource (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[RecruitmentSource]' />
+          <map key='[Sex (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[Sex]' />
+          <map key='[hire_date (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[hire_date]' />
+          <map key='[is_active (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[is_active]' />
+          <map key='[is_active_end_month]' value='[hr_monthly_snapshot v2.csv].[is_active_end_month]' />
+          <map key='[is_leaver (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[is_leaver]' />
+          <map key='[is_new_joiner (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[is_new_joiner]' />
+          <map key='[join_month (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[join_month]' />
+          <map key='[leave_month (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[leave_month]' />
+          <map key='[month_start]' value='[hr_monthly_snapshot v2.csv].[month_start]' />
+          <map key='[snapshot_month (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[snapshot_month]' />
+          <map key='[term_date (hr_monthly_snapshot v2.csv)]' value='[hr_monthly_snapshot v2.csv].[term_date]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EmpID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EmpID (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>EmpID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Employee_Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Employee_Name (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>Employee_Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>Sex</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Department</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Department (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>Department</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Position (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>Position</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EmploymentStatus</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EmploymentStatus (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>EmploymentStatus</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hire_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[hire_date (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>hire_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>term_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[term_date (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>term_date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>join_month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[join_month (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>join_month</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leave_month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[leave_month (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>leave_month</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RecruitmentSource</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RecruitmentSource (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>RecruitmentSource</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PerformanceScore</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PerformanceScore (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>PerformanceScore</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EngagementSurvey</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[EngagementSurvey (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>EngagementSurvey</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EmpSatisfaction</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EmpSatisfaction (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>EmpSatisfaction</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Absences</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Absences (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>Absences</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ManagerName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ManagerName (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>ManagerName</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RaceDesc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RaceDesc (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>RaceDesc</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_start</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[month_start]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>month_start</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snapshot_month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[snapshot_month (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>snapshot_month</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_active</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_active (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>is_active</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_active_end_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_active_end_month]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>is_active_end_month</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_new_joiner</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_new_joiner (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>is_new_joiner</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_leaver</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_leaver (hr_monthly_snapshot v2.csv)]</local-name>
+            <parent-name>[hr_monthly_snapshot v2.csv]</parent-name>
+            <remote-alias>is_leaver</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Absences (hr monthly snapshot v2.csv)' datatype='integer' name='[Absences (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+      <column caption='Latest Month (Current Month)' datatype='boolean' name='[Calculation_2341464452575232]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[month_start] = {MAX([month_start])}' />
+      </column>
+      <column caption='Rolling 12M Attrition' datatype='real' name='[Calculation_2341464456708097]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [month_start] &gt; DATEADD(&apos;month&apos;, -12, {MAX([month_start])}) &#13;&#10;    THEN [is_leaver (hr_monthly_snapshot v2.csv)] END) &#13;&#10;/ &#13;&#10;AVG(IF [month_start] &gt; DATEADD(&apos;month&apos;, -12, {MAX([month_start])}) &#13;&#10;    THEN [is_active_end_month] END) / 100' />
+      </column>
+      <column caption='Monthly Attrition' datatype='real' name='[Calculation_2341464462036994]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([is_leaver (hr_monthly_snapshot v2.csv)]) / SUM([is_active_end_month])' />
+      </column>
+      <column caption='% Women' datatype='real' name='[Calculation_2341464465731587]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Sex (hr_monthly_snapshot v2.csv)] = &apos;F&apos; THEN [is_active_end_month] END) / SUM([is_active_end_month])' />
+      </column>
+      <column caption='% Male' datatype='real' name='[Calculation_2341464468258820]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Sex (hr_monthly_snapshot v2.csv)] = &apos;M&apos; THEN [is_active_end_month] END) / SUM([is_active_end_month])' />
+      </column>
+      <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='EmpID (hr monthly snapshot v2.csv)' datatype='integer' name='[EmpID (hr_monthly_snapshot v2.csv)]' role='dimension' type='ordinal' />
+      <column caption='EmpSatisfaction (hr monthly snapshot v2.csv)' datatype='integer' name='[EmpSatisfaction (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+      <column caption='Employee Name (hr monthly snapshot v2.csv)' datatype='string' name='[Employee_Name (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='EmploymentStatus (hr monthly snapshot v2.csv)' datatype='string' name='[EmploymentStatus (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='EngagementSurvey (hr monthly snapshot v2.csv)' datatype='real' name='[EngagementSurvey (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+      <column caption='ManagerName (hr monthly snapshot v2.csv)' datatype='string' name='[ManagerName (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='PerformanceScore (hr monthly snapshot v2.csv)' datatype='string' name='[PerformanceScore (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='Position (hr monthly snapshot v2.csv)' datatype='string' name='[Position (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='RaceDesc (hr monthly snapshot v2.csv)' datatype='string' name='[RaceDesc (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='RecruitmentSource (hr monthly snapshot v2.csv)' datatype='string' name='[RecruitmentSource (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='Sex (hr monthly snapshot v2.csv)' datatype='string' name='[Sex (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;F&quot;' value='Women' />
+          <alias key='&quot;M&quot;' value='Men' />
+        </aliases>
+      </column>
+      <column caption='hr_monthly_snapshot v2.csv' datatype='table' name='[__tableau_internal_object_id__].[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]' role='measure' type='quantitative' />
+      <column caption='Hire Date (Hr Monthly Snapshot V2.Csv)' datatype='date' name='[hire_date (hr_monthly_snapshot v2.csv)]' role='dimension' type='ordinal' />
+      <column caption='Is Active (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_active (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+      <column caption='Is Active End Month' datatype='integer' name='[is_active_end_month]' role='measure' type='quantitative' />
+      <column caption='Is Leaver (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_leaver (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+      <column caption='Is New Joiner (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_new_joiner (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+      <column caption='Join Month (Hr Monthly Snapshot V2.Csv)' datatype='string' name='[join_month (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='Leave Month (Hr Monthly Snapshot V2.Csv)' datatype='string' name='[leave_month (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+      <column caption='Snapshot Month (Hr Monthly Snapshot V2.Csv)' datatype='string' name='[snapshot_month (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+      <column caption='Term Date (Hr Monthly Snapshot V2.Csv)' datatype='date' name='[term_date (hr_monthly_snapshot v2.csv)]' role='dimension' type='ordinal' />
+      <column-instance column='[Sex (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Sex (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_2341464465731587]' derivation='User' name='[usr:Calculation_2341464465731587:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2341464468258820]' derivation='User' name='[usr:Calculation_2341464468258820:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/LAURAM~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0cso44r1ryetjm14xxiga1hfdoaz.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/30/2026 07:38:37 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[Absences (hr_monthly_snapshot v2.csv)]' value='[Extract].[Absences]' />
+            <map key='[Department (hr_monthly_snapshot v2.csv)]' value='[Extract].[Department]' />
+            <map key='[EmpID (hr_monthly_snapshot v2.csv)]' value='[Extract].[EmpID]' />
+            <map key='[EmpSatisfaction (hr_monthly_snapshot v2.csv)]' value='[Extract].[EmpSatisfaction]' />
+            <map key='[Employee_Name (hr_monthly_snapshot v2.csv)]' value='[Extract].[Employee_Name]' />
+            <map key='[EmploymentStatus (hr_monthly_snapshot v2.csv)]' value='[Extract].[EmploymentStatus]' />
+            <map key='[EngagementSurvey (hr_monthly_snapshot v2.csv)]' value='[Extract].[EngagementSurvey]' />
+            <map key='[ManagerName (hr_monthly_snapshot v2.csv)]' value='[Extract].[ManagerName]' />
+            <map key='[PerformanceScore (hr_monthly_snapshot v2.csv)]' value='[Extract].[PerformanceScore]' />
+            <map key='[Position (hr_monthly_snapshot v2.csv)]' value='[Extract].[Position]' />
+            <map key='[RaceDesc (hr_monthly_snapshot v2.csv)]' value='[Extract].[RaceDesc]' />
+            <map key='[RecruitmentSource (hr_monthly_snapshot v2.csv)]' value='[Extract].[RecruitmentSource]' />
+            <map key='[Sex (hr_monthly_snapshot v2.csv)]' value='[Extract].[Sex]' />
+            <map key='[hire_date (hr_monthly_snapshot v2.csv)]' value='[Extract].[hire_date]' />
+            <map key='[is_active (hr_monthly_snapshot v2.csv)]' value='[Extract].[is_active]' />
+            <map key='[is_active_end_month]' value='[Extract].[is_active_end_month]' />
+            <map key='[is_leaver (hr_monthly_snapshot v2.csv)]' value='[Extract].[is_leaver]' />
+            <map key='[is_new_joiner (hr_monthly_snapshot v2.csv)]' value='[Extract].[is_new_joiner]' />
+            <map key='[join_month (hr_monthly_snapshot v2.csv)]' value='[Extract].[join_month]' />
+            <map key='[leave_month (hr_monthly_snapshot v2.csv)]' value='[Extract].[leave_month]' />
+            <map key='[month_start]' value='[Extract].[month_start]' />
+            <map key='[snapshot_month (hr_monthly_snapshot v2.csv)]' value='[Extract].[snapshot_month]' />
+            <map key='[term_date (hr_monthly_snapshot v2.csv)]' value='[Extract].[term_date]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>EmpID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EmpID (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EmpID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>223</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Employee_Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Employee_Name (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Employee_Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>223</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sex</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sex (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sex</remote-alias>
+              <ordinal>2</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Department</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Department (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Department</remote-alias>
+              <ordinal>3</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Position (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Position</remote-alias>
+              <ordinal>4</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EmploymentStatus</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EmploymentStatus (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EmploymentStatus</remote-alias>
+              <ordinal>5</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hire_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[hire_date (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hire_date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>term_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[term_date (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>term_date</remote-alias>
+              <ordinal>7</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>join_month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[join_month (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>join_month</remote-alias>
+              <ordinal>8</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>leave_month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[leave_month (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>leave_month</remote-alias>
+              <ordinal>9</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RecruitmentSource</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[RecruitmentSource (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RecruitmentSource</remote-alias>
+              <ordinal>10</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PerformanceScore</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PerformanceScore (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PerformanceScore</remote-alias>
+              <ordinal>11</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EngagementSurvey</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[EngagementSurvey (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EngagementSurvey</remote-alias>
+              <ordinal>12</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>93</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EmpSatisfaction</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EmpSatisfaction (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EmpSatisfaction</remote-alias>
+              <ordinal>13</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Absences</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Absences (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Absences</remote-alias>
+              <ordinal>14</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ManagerName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ManagerName (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ManagerName</remote-alias>
+              <ordinal>15</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RaceDesc</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[RaceDesc (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RaceDesc</remote-alias>
+              <ordinal>16</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_start</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[month_start]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_start</remote-alias>
+              <ordinal>17</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>snapshot_month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[snapshot_month (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>snapshot_month</remote-alias>
+              <ordinal>18</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_active</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_active (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_active</remote-alias>
+              <ordinal>19</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_active_end_month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_active_end_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_active_end_month</remote-alias>
+              <ordinal>20</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_new_joiner</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_new_joiner (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_new_joiner</remote-alias>
+              <ordinal>21</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_leaver</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_leaver (hr_monthly_snapshot v2.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_leaver</remote-alias>
+              <ordinal>22</ordinal>
+              <family>hr_monthly_snapshot v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Sex (hr_monthly_snapshot v2.csv):nk]' type='palette'>
+            <map to='#9b7fc7'>
+              <bucket>&quot;M&quot;</bucket>
+            </map>
+            <map to='#c9b8e8'>
+              <bucket>&quot;F&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.15w300708xhg7515m33db14siybz]&quot;</bucket>
+            </map>
+            <map to='#9b7fc7'>
+              <bucket>&quot;[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464468258820:qk]&quot;</bucket>
+            </map>
+            <map to='#c9b8e8'>
+              <bucket>&quot;[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464465731587:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='hr_monthly_snapshot v2.csv' id='hr_monthly_snapshot v2.csv_9D22E8D875604DC886E8EEB8D0D4B77D'>
+            <properties context=''>
+              <relation connection='textscan.1rge44k1v8vcgy107kdxv0cdxl86' name='hr_monthly_snapshot v2.csv' table='[hr_monthly_snapshot v2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='EmpID' ordinal='0' />
+                  <column datatype='string' name='Employee_Name' ordinal='1' />
+                  <column datatype='string' name='Sex' ordinal='2' />
+                  <column datatype='string' name='Department' ordinal='3' />
+                  <column datatype='string' name='Position' ordinal='4' />
+                  <column datatype='string' name='EmploymentStatus' ordinal='5' />
+                  <column datatype='date' name='hire_date' ordinal='6' />
+                  <column datatype='date' name='term_date' ordinal='7' />
+                  <column datatype='string' name='join_month' ordinal='8' />
+                  <column datatype='string' name='leave_month' ordinal='9' />
+                  <column datatype='string' name='RecruitmentSource' ordinal='10' />
+                  <column datatype='string' name='PerformanceScore' ordinal='11' />
+                  <column datatype='real' name='EngagementSurvey' ordinal='12' />
+                  <column datatype='integer' name='EmpSatisfaction' ordinal='13' />
+                  <column datatype='integer' name='Absences' ordinal='14' />
+                  <column datatype='string' name='ManagerName' ordinal='15' />
+                  <column datatype='string' name='RaceDesc' ordinal='16' />
+                  <column datatype='date' name='month_start' ordinal='17' />
+                  <column datatype='string' date-parse-format='MMM-yyyy' name='snapshot_month' ordinal='18' />
+                  <column datatype='integer' name='is_active' ordinal='19' />
+                  <column datatype='integer' name='is_active_end_month' ordinal='20' />
+                  <column datatype='integer' name='is_new_joiner' ordinal='21' />
+                  <column datatype='integer' name='is_leaver' ordinal='22' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.15w300708xhg7515m33db14siybz'>
+      <datasources>
+        <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+      </datasources>
+      <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+        <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+        <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]'>
+        <groupfilter function='level-members' level='[none:Department (hr_monthly_snapshot v2.csv):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_B8628855F7C641C78F69AF9BC92CF6A8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Gender Split' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Sex (hr monthly snapshot v2.csv)' />
+        <param name='target' value='Gender Split' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='% Women'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4a4a4a' fontsize='14'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Latest Month (Current Month)' datatype='boolean' name='[Calculation_2341464452575232]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[month_start] = {MAX([month_start])}' />
+            </column>
+            <column caption='% Women' datatype='real' name='[Calculation_2341464465731587]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Sex (hr_monthly_snapshot v2.csv)] = &apos;F&apos; THEN [is_active_end_month] END) / SUM([is_active_end_month])' />
+            </column>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Sex (hr monthly snapshot v2.csv)' datatype='string' name='[Sex (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Women' />
+                <alias key='&quot;M&quot;' value='Men' />
+              </aliases>
+            </column>
+            <column caption='Is Active End Month' datatype='integer' name='[is_active_end_month]' role='measure' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2341464452575232]' derivation='None' name='[none:Calculation_2341464452575232:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2341464465731587]' derivation='User' name='[usr:Calculation_2341464465731587:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2341464452575232:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</column>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#6b4fa0' />
+            <format attr='text-format' field='[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464465731587:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6b4fa0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464465731587:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontsize='18'>% Female</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#ffffff' fontsize='40'><![CDATA[<[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464465731587:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='3.5690608024597168' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{16FD9B34-DCDC-4D78-8D6D-EEF0B34F353B}' />
+    </worksheet>
+    <worksheet name='Attrition'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4a4a4a' fontsize='14'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Rolling 12M Attrition' datatype='real' name='[Calculation_2341464456708097]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [month_start] &gt; DATEADD(&apos;month&apos;, -12, {MAX([month_start])}) &#13;&#10;    THEN [is_leaver (hr_monthly_snapshot v2.csv)] END) &#13;&#10;/ &#13;&#10;AVG(IF [month_start] &gt; DATEADD(&apos;month&apos;, -12, {MAX([month_start])}) &#13;&#10;    THEN [is_active_end_month] END) / 100' />
+            </column>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Is Active End Month' datatype='integer' name='[is_active_end_month]' role='measure' type='quantitative' />
+            <column caption='Is Leaver (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_leaver (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2341464456708097]' derivation='User' name='[usr:Calculation_2341464456708097:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#6b4fa0' />
+            <format attr='text-format' field='[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464456708097:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6b4fa0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464456708097:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontsize='18'>Rolling 12M</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#ffffff' fontsize='18'>Attrition</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#ffffff' fontsize='40'><![CDATA[<[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464456708097:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='3.5690608024597168' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4843CC5F-EE53-48CD-BBFA-794195D177B7}' />
+    </worksheet>
+    <worksheet name='Attrition % Trend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#6b4fa0' fontname='Tableau Bold' fontsize='18'>Monthly Attrition </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#4a4a4a' fontname='Tableau Bold' fontsize='12'>Monthly attrition fluctuated across the period, peaking at 1.4% in Apr and Aug 2018. </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Monthly Attrition' datatype='real' name='[Calculation_2341464462036994]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([is_leaver (hr_monthly_snapshot v2.csv)]) / SUM([is_active_end_month])' />
+            </column>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Is Active End Month' datatype='integer' name='[is_active_end_month]' role='measure' type='quantitative' />
+            <column caption='Is Leaver (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_leaver (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[month_start]' derivation='Min' name='[min:month_start:qk]' pivot='key' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[snapshot_month (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Snapshot Month (Hr Monthly Snapshot V2.Csv)' datatype='string' name='[snapshot_month (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2341464462036994]' derivation='User' name='[usr:Calculation_2341464462036994:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' direction='ASC' using='[federated.15w300708xhg7515m33db14siybz].[min:month_start:qk]' />
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464462036994:qk]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464462036994:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464462036994:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#c9b8e8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15w300708xhg7515m33db14siybz].[usr:Calculation_2341464462036994:qk]</rows>
+        <cols>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{799D3E45-B5AC-4DE4-8695-A608DA4BDD14}' />
+    </worksheet>
+    <worksheet name='Gender Split'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#6b4fa0' fontname='Tableau Bold' fontsize='18'>Gender Split by Month</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#4a4a4a' fontname='Tableau Bold' fontsize='12'>Despite overall headcount declining, the gender split remained flat (women holding consistent 55-56% share of the workforce), suggesting attrition was broadly equal across men and women. </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Sex (hr monthly snapshot v2.csv)' datatype='string' name='[Sex (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Women' />
+                <alias key='&quot;M&quot;' value='Men' />
+              </aliases>
+            </column>
+            <column caption='Is Active End Month' datatype='integer' name='[is_active_end_month]' role='measure' type='quantitative' />
+            <column-instance column='[month_start]' derivation='Min' name='[min:month_start:qk]' pivot='key' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sex (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Sex (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[snapshot_month (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_active_end_month]' derivation='Sum' name='[pcto:sum:is_active_end_month:qk:5]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column caption='Snapshot Month (Hr Monthly Snapshot V2.Csv)' datatype='string' name='[snapshot_month (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' direction='ASC' using='[federated.15w300708xhg7515m33db14siybz].[min:month_start:qk]' />
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.15w300708xhg7515m33db14siybz].[pcto:sum:is_active_end_month:qk:5]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.15w300708xhg7515m33db14siybz].[pcto:sum:is_active_end_month:qk:5]' value='p0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.15w300708xhg7515m33db14siybz].[pcto:sum:is_active_end_month:qk:5]' value='p0%' />
+            <format attr='text-orientation' field='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.15w300708xhg7515m33db14siybz].[none:Sex (hr_monthly_snapshot v2.csv):nk]' value='Gender'>
+              <formatted-text>
+                <run>Gender</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.15w300708xhg7515m33db14siybz].[none:Sex (hr_monthly_snapshot v2.csv):nk]' />
+              <text column='[federated.15w300708xhg7515m33db14siybz].[pcto:sum:is_active_end_month:qk:5]' />
+              <text column='[federated.15w300708xhg7515m33db14siybz].[none:Sex (hr_monthly_snapshot v2.csv):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#9b7fc7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15w300708xhg7515m33db14siybz].[pcto:sum:is_active_end_month:qk:5]</rows>
+        <cols>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{A6FDC773-DF72-4908-B99D-AC84BB37CEFA}' />
+    </worksheet>
+    <worksheet name='Headcount'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4a4a4a' fontsize='14'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Latest Month (Current Month)' datatype='boolean' name='[Calculation_2341464452575232]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[month_start] = {MAX([month_start])}' />
+            </column>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Is Active End Month' datatype='integer' name='[is_active_end_month]' role='measure' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2341464452575232]' derivation='None' name='[none:Calculation_2341464452575232:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_active_end_month]' derivation='Sum' name='[sum:is_active_end_month:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2341464452575232:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</column>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#6b4fa0' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6b4fa0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]' value='Department'>
+              <formatted-text>
+                <run>Department</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[sum:is_active_end_month:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontsize='18'>Headcount</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#ffffff' fontsize='40'><![CDATA[<[federated.15w300708xhg7515m33db14siybz].[sum:is_active_end_month:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='3.5690608024597168' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E1522182-82FA-453B-AD53-71D670FA2D43}' />
+    </worksheet>
+    <worksheet name='Headcount Trend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#6b4fa0' fontname='Tableau Bold' fontsize='18'>Headcount Trend </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#4a4a4a' fontname='Tableau Bold' fontsize='12'>Headcount has been on a slow decline since Nov-2017, falling 6% YoY. </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Is Active End Month' datatype='integer' name='[is_active_end_month]' role='measure' type='quantitative' />
+            <column-instance column='[month_start]' derivation='Min' name='[min:month_start:qk]' pivot='key' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[snapshot_month (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Snapshot Month (Hr Monthly Snapshot V2.Csv)' datatype='string' name='[snapshot_month (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[is_active_end_month]' derivation='Sum' name='[sum:is_active_end_month:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' direction='ASC' using='[federated.15w300708xhg7515m33db14siybz].[min:month_start:qk]' />
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15w300708xhg7515m33db14siybz].[sum:is_active_end_month:qk]' scope='rows' value='Headcount' />
+            <format attr='display' class='0' field='[federated.15w300708xhg7515m33db14siybz].[sum:is_active_end_month:qk]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[sum:is_active_end_month:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#9b7fc7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15w300708xhg7515m33db14siybz].[sum:is_active_end_month:qk]</rows>
+        <cols>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{11F858B8-55B6-45E8-AC2A-30F35DE2A077}' />
+    </worksheet>
+    <worksheet name='Leavers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4a4a4a' fontsize='14'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Latest Month (Current Month)' datatype='boolean' name='[Calculation_2341464452575232]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[month_start] = {MAX([month_start])}' />
+            </column>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Is Leaver (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_leaver (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2341464452575232]' derivation='None' name='[none:Calculation_2341464452575232:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_leaver (hr_monthly_snapshot v2.csv)]' derivation='Sum' name='[sum:is_leaver (hr_monthly_snapshot v2.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2341464452575232:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</column>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#6b4fa0' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6b4fa0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[sum:is_leaver (hr_monthly_snapshot v2.csv):qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontsize='18'>Leavers</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#ffffff' fontsize='40'><![CDATA[<[federated.15w300708xhg7515m33db14siybz].[sum:is_leaver (hr_monthly_snapshot v2.csv):qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='3.5690608024597168' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C8B91EE4-9537-4D55-9A14-E4C725F95E9B}' />
+    </worksheet>
+    <worksheet name='New Joiners'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4a4a4a' fontsize='14'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Latest Month (Current Month)' datatype='boolean' name='[Calculation_2341464452575232]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[month_start] = {MAX([month_start])}' />
+            </column>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Is New Joiner (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_new_joiner (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2341464452575232]' derivation='None' name='[none:Calculation_2341464452575232:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_new_joiner (hr_monthly_snapshot v2.csv)]' derivation='Sum' name='[sum:is_new_joiner (hr_monthly_snapshot v2.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2341464452575232:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</column>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#6b4fa0' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#6b4fa0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[sum:is_new_joiner (hr_monthly_snapshot v2.csv):qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff' fontsize='18'>New Joiners</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#ffffff' fontsize='40'><![CDATA[<[federated.15w300708xhg7515m33db14siybz].[sum:is_new_joiner (hr_monthly_snapshot v2.csv):qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='3.5690608024597168' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3708C270-DC01-4148-9B96-BE07DF3F89C9}' />
+    </worksheet>
+    <worksheet name='New Joiners Trend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#6b4fa0' fontname='Tableau Bold' fontsize='18'>New Joiners Trend </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#4a4a4a' fontname='Tableau Bold' fontsize='12'>New joiner activity was minimal across the period, with only 1 hire (Jul-2018). Combined with fluctuating leaver numbers, this drove the steady headcount decline.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+            <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column caption='Is New Joiner (Hr Monthly Snapshot V2.Csv)' datatype='integer' name='[is_new_joiner (hr_monthly_snapshot v2.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[month_start]' derivation='Min' name='[min:month_start:qk]' pivot='key' type='quantitative' />
+            <column caption='Month Start' datatype='date' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[snapshot_month (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Snapshot Month (Hr Monthly Snapshot V2.Csv)' datatype='string' name='[snapshot_month (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[is_new_joiner (hr_monthly_snapshot v2.csv)]' derivation='Sum' name='[sum:is_new_joiner (hr_monthly_snapshot v2.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' direction='ASC' using='[federated.15w300708xhg7515m33db14siybz].[min:month_start:qk]' />
+          <slices>
+            <column>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.15w300708xhg7515m33db14siybz].[sum:is_new_joiner (hr_monthly_snapshot v2.csv):qk]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.15w300708xhg7515m33db14siybz].[sum:is_new_joiner (hr_monthly_snapshot v2.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#c9b8e8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15w300708xhg7515m33db14siybz].[sum:is_new_joiner (hr_monthly_snapshot v2.csv):qk]</rows>
+        <cols>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{196B0211-E6CB-493A-BF68-006137BA82B9}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='HR Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#6b4fa0' fontname='Benton Sans Book' fontsize='24'>People Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='hr_monthly_snapshot.csv' name='federated.15w300708xhg7515m33db14siybz' />
+      </datasources>
+      <datasource-dependencies datasource='federated.15w300708xhg7515m33db14siybz'>
+        <column caption='Department (hr monthly snapshot v2.csv)' datatype='string' name='[Department (hr_monthly_snapshot v2.csv)]' role='dimension' type='nominal' />
+        <column-instance column='[Department (hr_monthly_snapshot v2.csv)]' derivation='None' name='[none:Department (hr_monthly_snapshot v2.csv):nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98214' id='34' param='horz' type-v2='layout-flow' w='99074' x='463' y='893'>
+            <zone h='98214' id='26' param='horz' type-v2='layout-flow' w='99074' x='463' y='893'>
+              <zone h='98214' id='22' param='vert' type-v2='layout-flow' w='99074' x='463' y='893'>
+                <zone fixed-size='27' h='3906' id='23' is-fixed='true' type-v2='title' w='99074' x='463' y='893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='53' h='5915' id='31' is-fixed='true' param='horz' type-v2='layout-flow' w='99074' x='463' y='4799'>
+                  <zone forceUpdate='true' h='5915' id='32' type-v2='text' w='99074' x='463' y='4799'>
+                    <formatted-text>
+                      <run fontcolor='#4a4a4a' fontname='Tableau Light' fontsize='12'>This dashboard was created as a portfolio project to develop SQL and Tableau skills. The dataset is sourced from Kaggle and contains fictional employee data. Data spans Nov-2017 to Nov-2018, with Nov-2018 treated as the current month.</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='88393' id='19' param='horz' type-v2='layout-flow' w='99074' x='463' y='10714'>
+                  <zone h='88393' id='17' type-v2='layout-basic' w='99074' x='463' y='10714'>
+                    <zone h='21444' id='1' param='horz' type-v2='layout-flow' w='99074' x='463' y='10714'>
+                      <zone h='21444' id='3' param='horz' type-v2='layout-flow' w='99074' x='463' y='10714'>
+                        <zone h='21444' id='4' param='horz' type-v2='layout-flow' w='99074' x='463' y='10714'>
+                          <zone fixed-size='167' h='21444' id='5' is-fixed='true' name='Headcount' show-title='false' w='10590' x='463' y='10714'>
+                            <layout-cache type-h='cell' type-w='cell' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='8' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='190' h='21444' id='6' is-fixed='true' name='% Women' show-title='false' w='11921' x='11053' y='10714'>
+                            <layout-cache type-h='fixed' type-w='cell' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='8' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='188' h='21444' id='7' is-fixed='true' name='New Joiners' show-title='false' w='11806' x='22974' y='10714'>
+                            <layout-cache type-h='fixed' type-w='cell' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='8' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='179' h='21444' id='8' is-fixed='true' name='Leavers' show-title='false' w='11285' x='34780' y='10714'>
+                            <layout-cache type-h='fixed' type-w='cell' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='8' />
+                            </zone-style>
+                          </zone>
+                          <zone h='21444' id='9' name='Attrition' show-title='false' w='31365' x='46065' y='10714'>
+                            <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='8' />
+                            </zone-style>
+                          </zone>
+                          <zone fixed-size='374' h='21444' id='35' is-fixed='true' name='Headcount' param='[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]' type-v2='filter' values='database' w='22107' x='77430' y='10714'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                        </zone>
+                      </zone>
+                    </zone>
+                    <zone h='32689' id='10' param='vert' type-v2='layout-flow' w='99074' x='463' y='32158'>
+                      <zone h='32689' id='29' is-fixed='true' type-v2='layout-basic' w='99074' x='463' y='32158'>
+                        <zone h='32689' id='12' param='horz' type-v2='layout-flow' w='49536' x='463' y='32158'>
+                          <zone h='32689' id='13' name='Headcount Trend' w='49536' x='463' y='32158'>
+                            <layout-cache cell-count-w='13' minheight='191' type-h='scalable' type-w='cell' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='16' />
+                            </zone-style>
+                          </zone>
+                        </zone>
+                        <zone h='32689' id='30' param='horz' type-v2='layout-flow' w='49538' x='49999' y='32158'>
+                          <zone h='32689' id='24' name='Gender Split' w='49538' x='49999' y='32158'>
+                            <layout-cache cell-count-w='13' minheight='213' type-h='scalable' type-w='cell' />
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='16' />
+                            </zone-style>
+                          </zone>
+                        </zone>
+                      </zone>
+                    </zone>
+                    <zone h='34260' id='15' name='Attrition % Trend' w='49539' x='49998' y='64847'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='16' />
+                      </zone-style>
+                    </zone>
+                    <zone h='34260' id='28' name='New Joiners Trend' w='49535' x='463' y='64847'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='16' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontcolor='#6b4fa0' fontname='Benton Sans Book' fontsize='24'>People Dashboard</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2000' minheight='2000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='57' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98214' id='56' param='vert' type-v2='layout-flow' w='99074' x='463' y='893'>
+                <zone fixed-size='27' h='3906' id='23' type-v2='title' w='99074' x='463' y='893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5915' id='32' type-v2='text' w='99074' x='463' y='4799'>
+                  <formatted-text>
+                    <run fontcolor='#4a4a4a' fontname='Tableau Light' fontsize='12'>This dashboard was created as a portfolio project to develop SQL and Tableau skills. The dataset is sourced from Kaggle and contains fictional employee data. Data spans Nov-2017 to Nov-2018, with Nov-2018 treated as the current month.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='374' h='21444' id='35' mode='checkdropdown' name='Headcount' param='[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]' type-v2='filter' values='database' w='22107' x='77430' y='10714'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='155' h='21444' id='5' is-fixed='true' name='Headcount' show-title='false' w='10590' x='463' y='10714'>
+                  <layout-cache type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='155' h='21444' id='6' is-fixed='true' name='% Women' show-title='false' w='11921' x='11053' y='10714'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='155' h='21444' id='7' is-fixed='true' name='New Joiners' show-title='false' w='11806' x='22974' y='10714'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='155' h='21444' id='8' is-fixed='true' name='Leavers' show-title='false' w='11285' x='34780' y='10714'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='155' h='21444' id='9' is-fixed='true' name='Attrition' show-title='false' w='31365' x='46065' y='10714'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='230' h='32689' id='13' is-fixed='true' name='Headcount Trend' w='49536' x='463' y='32158'>
+                  <layout-cache cell-count-w='13' minheight='191' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='230' h='32689' id='24' is-fixed='true' name='Gender Split' w='49538' x='49999' y='32158'>
+                  <layout-cache cell-count-w='13' minheight='213' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='242' h='34260' id='28' is-fixed='true' name='New Joiners Trend' w='49535' x='463' y='64847'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='242' h='34260' id='15' is-fixed='true' name='Attrition % Trend' w='49539' x='49998' y='64847'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{27AC6B48-A383-44AA-962C-1454BCA84379}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Headcount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:Department (hr_monthly_snapshot v2.csv):nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DD3B458F-E66D-462C-8AE8-08E9FC9FB13C}' />
+    </window>
+    <window class='worksheet' name='New Joiners'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A3320116-85C9-474F-B103-47C971BA6298}' />
+    </window>
+    <window class='worksheet' name='Leavers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0BAA29C7-F94A-4F8B-8590-457AC3895D8F}' />
+    </window>
+    <window class='worksheet' name='Attrition'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{095A3FCB-5F3F-4063-B1AF-69D15B01EBDB}' />
+    </window>
+    <window class='worksheet' name='% Women'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:Calculation_2341464452575232:nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{16C31570-4CD2-4EFB-AA10-6ABE753FCBED}' />
+    </window>
+    <window class='worksheet' name='Headcount Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{148FE673-9EA0-48FC-A164-173EA7F715D6}' />
+    </window>
+    <window class='worksheet' name='New Joiners Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2F0458E2-DB75-4384-8EDF-CC24C0BB4F0F}' />
+    </window>
+    <window class='worksheet' name='Attrition % Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D5233BD4-8848-44F0-BDA3-25C2E60B8B13}' />
+    </window>
+    <window class='worksheet' name='Gender Split'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.15w300708xhg7515m33db14siybz].[none:Sex (hr_monthly_snapshot v2.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15w300708xhg7515m33db14siybz].[none:snapshot_month (hr_monthly_snapshot v2.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3EF4FD5F-2DEA-4699-A8E2-4249083E045E}' />
+    </window>
+    <window class='dashboard' maximized='true' name='HR Dashboard'>
+      <viewpoints>
+        <viewpoint name='% Women'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Attrition'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Attrition % Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Gender Split'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Headcount'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Headcount Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Leavers'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='New Joiners'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='New Joiners Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{C14354BC-CB87-4097-A968-857D93E0FCC2}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='% Women' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFPElEQVR4nO3bS2xUVQDG8e+293Yenc4AbYEBSkGI4WGICSEImBRJVJaiOwlbV6IJcUtY
+      6cYFC2LimqWJ8bVhgQsxJiQIi/KIFEhtpVTsyxY7z9t7XYgFFu7UJvf7/5JJzpxzF2cx/9w5
+      czNBkiSpAFOhJJ08dn6l9wGsiI6V3gCwkggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggAmbKqv6QoDCRJ+WK0PB92heqp5FUq5xQET64P/+8NAv+Vvu1V
+      7d1dkZTo2o0FVbvbGh6ekSTtHNqh3RtDTT5c1OWLd6UwUqCEAJAdhVJOMxNz6t/ar23P9ai2
+      0FAxP6daI5GUauTaLxoZfaT82jV69bVBJWHEVyBkx/3hcbVzRc3MNFQsF7TUaOnAka2PVwPt
+      emmL9h/eou0vVJULpTToJABkR5okGrk1rXCpqQcP61q9tqS4Gf+9qqsXb+vbb0Y0fm9GzWas
+      0ZuTCpIkSU8eO7+iGwf+LVE+kuJY7USqDlQ0dX9e8VKqrmKX1G6r1U4lSZX+kvJRwBkA2dJu
+      tJfHk2O/L49btdYz181P/aF58TMozBEArBEArBEArHEIRrYEgUrl3LNzaarFhabSp6YqfSWt
+      31QmAGTLqi3rdfqjw5qfrSl5/ImP6019cvqCHjWkzq5Ir5/Yp0OHNqrdWiIAZEt1cLXSZk0f
+      v/+1msmT+eTx+Mjx/Tq4t6KzH3yl6dkWZwBky7qNZS1Mzqsep0qSJy9JCqIu7Ts0oEtfDGt6
+      9q/nAtwBkCl91bJyawo6/u5BNRYb+vmn33T9xwm12qkKlZJ614SKSj06cWpI66rdBIBsGbsx
+      oahWloJA/Zv7dODoLr1ya1znPvxeYSFSFATac3Czblx9oLE7UwSAbLly4aauPPV+YM+gTp0Z
+      0u5d13V7MlasRJ+fu6SR8ZokngMg4369N6VaW+ruyak+/0izc4m27uhbXicAZEZHV6i333tZ
+      z+/sVT7fqXwpr6E396g7aGn07pySVkuXL41p6K0XtWlDURKHYGRIGieqJ51658xRpfGS1Nmh
+      II715ac/6P7DpiTpu8+uamDzYZ06+4Zqi23+D4DsKZYL2jC4Sh3pkiZGZ7W4GD+zHnR0aMO2
+      XvX3FrgDIHtqC3XdvV7/x/U0STRxZ0oTdzgDwBwBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwNqfqqUhmQTz
+      iUEAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Attrition' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAGU0lEQVR4nO3b3Y9U5QHH8d+Zc87Mzr6yMPvShWUFFFhwFy1oi6GpVrzRaCQBlTvjTXtR
+      LjDpHdf+A73yoqaRGKOJCSE1TbC2tbU1sVDLWwgqgrq8tOyw78zrmekFuHQDSy80bmZ+38/N
+      nD3neTbnYr6Zc54zE9RqtboAU5Ek7dv1+lKfB7AkUkt9AsBSIgBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBYIwBYIwBYi5b6BIBvI4pDpVsi1SpVFYvJgmOpKFZff0ZTc3Vl6hVVg1DXpwpK
+      av8z/3s+X+A7tfXJUQ12Jkp1derkkRM68+m0su1plQsVxa2temhHv06cS9SbTOha0qJLZy+r
+      nEhhFKparhIAGly9rn9+8JlqfQNat7JDneuHlGuVOrpi/e7tcwuGrlrfp/yX43r+59s1dn5S
+      XVGZewA0uCDQo3u26emd/frwwyu6Z2WL3n37pC5PBuruChcMjeJQQSBdz0/rvXdOK8xmCAAN
+      rl7X+29+rOOfFTT6QE7XZuvatn21BnpjTc/U/u/0oFar1fftev17OFPgu9fSnlG1WFY1kZbn
+      spqcKGn1uuXKX5rU7FyitvZIpXJdoWoK07EKsyW1dWY0M1lUR1eGewA0tuJsaX772tXrkqQL
+      Z6/O75udLkuSKpJ0c5VoZrJ443WqxCUQvBEAmk8QqLunVcGtPxdFAGg6/cODeunlHRroSSvd
+      ntXTL4yoJRtp444N2jLSrShKKZ0JFWci7gHQfDaN9ujQG6c1/GC/gouJ1g73aeTLCfVu6lVX
+      LavxqQv62e4RlWYKBIDmEoSh1g/nlEnVtGZVVn/8y1GNnevRP/4+po1hh9LjY7p4saiwnuid
+      3xzlEgjNZdlgj7469rn++u4ZXbiaqDsbKLu8Q8Obc5qZLGjjw2uUy7WoMFNUUuM5AJpMnIkV
+      1BKVKzWls2nVKxWl21qUTUvj40X1DHRqJj+rMA41N1PmEgjNpVKqzG+XCzefAUwVNHdz39WL
+      Uzc2bj4T4BII1ggA1ggA1ggA1ggADS0Vhdr8oyGt6E4vOmbjQ0N6+NG16u/L3naMVSA0pCCV
+      0vCP1+jJ50Y0NNSp1w4cVn6ifNu4gc2Demn/I4rTsQ7/+g+68u/CguN8AqAhbXtqi178xQ91
+      /tiYyot82S2IIj374lb9+a1jyk9X7ziGANCQvj71lV755SEdeuuMkkXGbNm5SbnUnN5/78Ki
+      /4cA0JCunM9rcrqy6PFMV7ue2TOsw789qlKlvug4AkBT2rl3q/Knv9DxkxN3HUcAaDo99/5A
+      jz22UqeP/0f3jfZr/Uif0lGg3tXLtWqwY8FYVoHQdFatXaFrV2b1yDNbbuwIAnW2hhr96Qal
+      JL158NT8WAJAQ2rryiqOA0XpGz99bFuW1bJcWZVCRZ8cOaVPjtx6kyuOdeDVPfrbwY/0pw8u
+      SZJ+susBtSVzBIDGtPdXT+j+DZ2SpFDSnv2Pa3ddOvb7f+nga6fuPlnS5u1rtaKS5/cAaEyZ
+      bKwwvP0BQLWSqFy6fWG0pS2taqmiarU+Pz9QnU8ANKZSYfEl0Dspzi18SvzNfFaBYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YO2/TW5iEQwbFxcAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Attrition % Trend' width='192'>
+      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
+      MEz+B5SLYEPrK9yXAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Gender Split' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='HR Dashboard' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Headcount' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAHk0lEQVR4nO3aW4xcdQHH8d+Zc+ayM7O37m673V62LE0pvVDpcmsp2EIajBRQSDAxUR8w
+      TdSgJiQ+mPiEMZHIs9EHL4R4eSggIQShSlFaWUirtFukgLbd3aZXdju7O7Nz2xkfVtauW21F
+      dJr8vp9kks35n5z/f5LznXPOzgS1Wq0uwFSkuvTw/U80eh1AQ8QavQCgkQgA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggADZFsiiRJQSymROJyTsNAy/ra
+      P/yEwcU3EwAa4r7P90uSmpcv0h1bl0qSMi0pRdHMmZpKJ5SajSRQOtukzdv7JEmJprhSqVAK
+      AmVbUwpjM/uEYaAgFlMYBooSoRKpuJLJUFEmq3sfvFaJZDhvHdH/480C/yyWiGvVdd3KdC+Q
+      NKENd16r7uZAza1xPferv2jL1uXqXNauV36xXxt3bFBpLK/mdKSuq7t1x7YlOnFsVImOBYqq
+      JbVkYtp34Lx601M6NpXW8kRePTeu1sTpMS3vbdZv95zSyvU9Wnf0vA68fnLuOhrz9mEvCJRq
+      iiuZmvkMXrOhW/Uwpmxni9oyoYJYoGo9Us+KViXKBe1+5s8aL1R1zfWL9funD+nV3UfV1Tat
+      F3cNqqCEmppChWFMsXDmCqBKRa88e1i5ybqGj5zRyHun5538EgGgQWqlsg4ODOutg2ckSceP
+      jmlqLK/BN4bUtmyh4tWKytWapksVZRa2qX/LCmWbQh1/Z1Q337VKH7upR4VKUhs396o1JU3m
+      yupd26MNG7vnT1apKL1wgVauWjBvKKhN1+oP3//E//r9AnNkW1OazBUVi0KlEoGmijV19TSr
+      MlXS+bGyela0aWK0oGKhrKgpqdZspMnJsiZyJbV2ZRXVp3V+vKIlvW06NzKmQrGmnt425XNF
+      lQplhcm48uNFZVtSmhwvqrkjq2RsWufOTs1ZBwHAGrdAsEYAsEYAsEYAsMYXYbhiRMlInYuy
+      ikeBzp2c0NRUdc54KpvSsr52FXMFnRjOqVb7YHtSUTj/tw7VUlXFYnXe9jlzfmSrBz6sINCm
+      e67T9rtXKlavS4EUhdKzP9ir1984LUnq61+hL3z5RtUr04oSkU4dGdEPH/+DytW6HvjqNq1a
+      kbngeFKmOak/vXBQT/5k8N9OTQBouCiZ0pq1bfrRo7/WyMikJOmWT/frM1/ZrMM7n9Z0pkVf
+      fORWvfrkXj3//DHF0yl97bF7dEN/l/YNnNEvv/eSYsE/rgCLVi/VI9/aogN7j19ybp4B0HDV
+      4pR+/N3fzZ78kpSfKElBoCCQetf1qKlW0r49Q5KkSqGofXuOav1NMz+iq5anVS5VZ19bPrla
+      Jw4d09vvTVxybgLAFaFWq8/+3Xd9rx783Hod+M0RTZakhT0tyo+Oa7xQm93n5FBOXYtb5h1n
+      wVXdumFjp3Y/dVgXHPJf4hYIV4womdD2z/Zr+yeu0sBzB/XUz96SJMUTkWqVmmoX7FspVxVP
+      RopJc7Zv/dQ6jb47ooODY5c350e2euC/kGxJ66Fv3qkl7TH99Dsv6c03z86OTU2VFaVaFEn6
+      4H86TZmESoXKnJO/uadTmzZ1a9djL2j6Mj79JQLAFSHQfTtvVVeirMe/8bJGc+U5o6eGcsp0
+      XK2O9kinx2YSWL6yQyeH5n7K337vOuWHT2v/H89d9sw8A6DhmjrbdPOmxXrtxSMK00l1LW6e
+      eXVnFcak4cERnSvEdNcDaxSFgdqXdui2bb3av2949hjpzjZt+fhSvfzMoCrTlz83VwA0XPvi
+      ViVDacfO23X3hQPlkh790i6dHZvSz78/oIe+fou+fdtqxVNxnTg8rLffyc3uunnHWtXef18D
+      r536j+bm59BouFgUUzqTmD9Qrys/UVL97/fzmba0+q7pVDGX11/fHdX0BTf6qUxCQa0279vj
+      S+EKgIarVWuazBUvuV/+fEGHBoYuOlbMly+6/VJ4BoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1
+      AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1
+      AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1
+      AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1
+      AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoC1vwHp
+      KckD81gfaQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Headcount Trend' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Leavers' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAADaklEQVR4nO3bMYpdZRiA4e/emUxuzMzEQExCFEFBQTDYqegKjFV24AayAguXYR9wA7YB
+      CzvrFIKIqLFIQKKjQ5wh470WgbQ24sC8z1P9B07xNS8/34GzWK/Xm4Go7ZmZO7fvnvYccCqW
+      pz0AnCYBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA
+      mgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDPp3PntWS7+/T0BcCa99/HNuXbl3LOHxczF/dVsbT0rYnVx
+      Z1arrVksF7N9ijPC/+LdW2/P/vZ69i4u5969B/P+By/Ptdcuz9dffucG4KxbzFs3r81yezmX
+      ru/P7mprFsuZ9dbOrP5+4gbgjFou550PX58rP/42P//4+xz9ejj3Hx7M1Tevz+av4zk5Wc9s
+      NrNYr9ebO7fvnva48J9a7Z6fvb2dOTl+OgcHT+elG7tzfHg0f/x5MjdevTQHj5/M0eGxG4Cz
+      6ejweI4Oj58/P3pw8Pz8yw+Pn5/tAKQJgDQBkCYA0gRAmq9AJO1c2JlX3rgqAIoW88lnH831
+      C08FQNNXX3wzP337SAAUbeb7+w9nxhJMnABIEwBpdgByFsvF7L24msUIgKAXLl+eTz+/NTsz
+      /gcgaLGY3f3zM+MGoGizmcODo5mxBBMnANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMA
+      aQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAm
+      ANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIg
+      TQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIE
+      QJoASBMAaQIgTQCk/QM4wV/vfd+IqAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='New Joiners' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAEHUlEQVR4nO3bT2scZQDH8d/uzs7udNvNH4zRFNFoEZUeLHrRQy4KRfBgD4LgrTcPPXjx
+      pfgCeumLEHpQtBePQlEMSErVJlvTbEyyu9md9RAMXuslxu/3c5p5hgdmYL48MwPTqOt6Hgmq
+      SJJbN26f9XlIZ6J51icgnSUDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwCh
+      GYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYg
+      NAMQmgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0A
+      hGYAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZ
+      gNAMQGgGIDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQDEBoBqBz
+      rdsrU7QaSZJOt3iquWW3bQA63z76bCPvf7CeVqfKh5+8kSSpLnZSls00W800m0mraKbVaqRZ
+      nOz/7fqnb+fpkpH+Y0aPd9NYWk6/epQkWX9rPVev9FItVLn37W95cXGa+erzaexsZ7q4nM2v
+      72dnb3o63xVA59s8+e7uL3n3vZeSJK+9uZZGkrJXpd7by8rLqyln45RL/awsFhn84+ZPDED/
+      A3sPB8niYrqtZOvnxxkfjnP/+wfZHRyksbCQ6d5+Zp0q9f6fmScpup1c21jP8sWkUdf1/NaN
+      22d9DdK/0ut3cjAcp6zKdNvJcDjJM2v9ZDrNYPswF/rdzMaTpGinWU9zdDRLo9XKC68s5Y+H
+      T3wH0Pl2MBwnSSZHk0yOTsYGvw5Pjx8ORycb4/Hp2Hw2y9ZPgyQ+AgnOAIRmAEIzAKEZgLDK
+      C6VfgcR0+fXLufn5O64A4imqKje/2MiPd38wAPGsvvpcVnrzfPPVpgGIZ2Wtn9H+YXZ3jw1A
+      PO2ylXo2S137FUhAo8PjFO12irYBCGj7wZOUl3pZfbYyAPHsbP6erUeTXP/4qgGIpz4+zp0v
+      7+XytSv+DyCu7qWuK4C4RvsjAxCbAQjNAIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYAQjMA
+      oRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGgG
+      IDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwChGYDQDEBoBiA0AxCaAQjN
+      AIRmAEIzAKEZgNAMQGgGIDQDEJoBCM0AhGYAQjMAoRmA0AxAaAYgNAMQmgEIzQCEZgBCMwCh
+      GYDQDEBoBiA0AxCaAQjNAIRmAEIzAKEZgNAMQGh/AQwHnoax57v/AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='New Joiners Trend' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
